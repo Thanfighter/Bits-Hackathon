@@ -1,0 +1,155 @@
+{
+  "project_name": "TradeIQ Sentinel 3.0",
+  "app_type": "dashboard",
+  "theme_mode": "light",
+  "design_archetype": "Archetype 4 (Swiss & High-Contrast)",
+  "core_philosophy": "Color is Function Only. 95% of the UI is strictly monochrome (Black, White, Gray). The ONLY colors allowed are the Traffic Light risk indicators (Green, Yellow, Red) and map routes. This ensures immediate cognitive recognition of risk for high-stakes logistics decisions.",
+  
+  "colors": {
+    "background": {
+      "default": "#FFFFFF",
+      "surface": "#F4F4F5",
+      "surface_hover": "#E4E4E7",
+      "overlay": "rgba(9, 9, 11, 0.4)"
+    },
+    "text": {
+      "primary": "#09090B",
+      "secondary": "#71717A",
+      "tertiary": "#A1A1AA",
+      "inverse": "#FFFFFF"
+    },
+    "border": {
+      "default": "#E4E4E7",
+      "strong": "#D4D4D8",
+      "focus": "#09090B"
+    },
+    "brand": {
+      "primary": "#09090B",
+      "primary_hover": "#27272A"
+    },
+    "functional": {
+      "risk_green": {
+        "bg": "#00C853",
+        "text": "#000000",
+        "muted_bg": "#DCFCE7",
+        "border": "#86EFAC"
+      },
+      "risk_yellow": {
+        "bg": "#FFD600",
+        "text": "#000000",
+        "muted_bg": "#FEF9C3",
+        "border": "#FDE047"
+      },
+      "risk_red": {
+        "bg": "#FF3B30",
+        "text": "#FFFFFF",
+        "muted_bg": "#FEE2E2",
+        "border": "#FCA5A5"
+      }
+    }
+  },
+
+  "typography": {
+    "strategy": "Swiss Brutalist - High weight contrast. Sharp, unopinionated, and deeply corporate.",
+    "fonts": {
+      "heading": "Cabinet Grotesk",
+      "body": "IBM Plex Sans",
+      "mono": "IBM Plex Mono"
+    },
+    "scale": {
+      "h1": "text-4xl md:text-5xl tracking-tighter font-black uppercase",
+      "h2": "text-2xl md:text-3xl tracking-tight font-bold",
+      "h3": "text-xl font-bold",
+      "body": "text-base font-normal leading-relaxed",
+      "data_large": "text-6xl font-black font-mono tracking-tighter",
+      "data_label": "text-xs font-mono tracking-[0.2em] uppercase font-semibold text-zinc-500",
+      "table_cell": "text-sm font-mono"
+    }
+  },
+
+  "layout_and_spacing": {
+    "grid_system": "The 'Control Room' Grid",
+    "structure": {
+      "base_grid": "grid-cols-1 md:grid-cols-4 lg:grid-cols-12",
+      "gap": "gap-1 md:gap-4",
+      "padding_containers": "p-4 md:p-6",
+      "padding_inner": "p-3 md:p-4"
+    },
+    "alignment": "Strictly left-aligned. No center-aligned text or components unless inside a specific visual gauge. Optical alignment for icons inside buttons."
+  },
+
+  "surface_styles": {
+    "strategy": "Grid Borders (The Technical Look). Expose the skeleton.",
+    "cards": "bg-white border border-zinc-200 rounded-none shadow-none",
+    "cards_hover": "-translate-y-[1px] shadow-[4px_4px_0px_0px_rgba(9,9,11,1)] transition-all duration-200 border-zinc-950",
+    "panels": "bg-zinc-50 border border-zinc-200 rounded-none",
+    "modals": "bg-white border-2 border-zinc-950 rounded-none shadow-[8px_8px_0px_0px_rgba(9,9,11,1)]",
+    "buttons": {
+      "primary": "bg-zinc-950 text-white rounded-none font-bold uppercase tracking-widest text-xs px-6 py-4 hover:bg-zinc-800 transition-colors",
+      "secondary": "bg-white text-zinc-950 border border-zinc-200 rounded-none font-bold uppercase tracking-widest text-xs px-6 py-4 hover:border-zinc-950 hover:bg-zinc-50 transition-colors"
+    }
+  },
+
+  "components_and_features": {
+    "dashboard_overview": {
+      "layout": "F-Pattern. Top left must be the North Star Metric (Active Shipments / System Status). Followed by recent shipments list.",
+      "widgets": "Use 'col-span-3' for main table, 'col-span-1' for tall summary widgets."
+    },
+    "risk_decision_output": {
+      "visuals": "Must be the dominant UI element after a simulation. Use `text-6xl` for the score (0-100). Background of this card MUST map exactly to the risk color (Green/Yellow/Red). If Red, background is #FF3B30, text is White. If Yellow/Green, background is color, text is Black."
+    },
+    "risk_breakdown_cards": {
+      "layout": "Grid of 5 metrics (Congestion, Tax, Weather, Carrier, Carbon). Use horizontal progress bars or simple data readouts in IBM Plex Mono. High contrast."
+    },
+    "scenario_simulator": {
+      "ui": "Control panel style. Use native HTML range sliders styled as brutalist blocks, or Shadcn toggles customized with square corners. Instantly updates the Risk Decision Output."
+    },
+    "map_visualization": {
+      "library": "Leaflet / react-leaflet",
+      "style": "MUST use a grayscale/monochrome tile provider (e.g., CartoDB Positron or a custom B&W map tile URL). This ensures the route lines (which will be colored Green/Yellow/Red based on risk) pop violently against the gray map."
+    },
+    "finance_simulation": {
+      "ui": "Design this section like a printed receipt or a terminal readout. Use `bg-zinc-50`, `font-mono`, dotted borders (`border-dashed`), and right-aligned numeric columns to simulate financial escrow logic."
+    },
+    "loading_intelligence_screen": {
+      "animation": "Avoid generic spinners. Use a terminal-style typing effect (e.g., '> analyzing HS code... [OK] \n > simulating weather patterns... [WARN] \n > calculating carbon tax...'). Flash a cursor `_`. Font must be `IBM Plex Mono`."
+    }
+  },
+
+  "icons_and_assets": {
+    "library": "@phosphor-icons/react",
+    "weight": "regular or bold (no duotone, keep it solid/technical)",
+    "installation": "yarn add @phosphor-icons/react"
+  },
+
+  "media_urls": {
+    "avatar_user": {
+      "url": "https://images.unsplash.com/photo-1740153204804-200310378f2f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBidXNpbmVzcyUyMHdvbWFuJTIwYXZhdGFyfGVufDB8fHx8MTc3NDY3OTk0OXww&ixlib=rb-4.1.0&q=85",
+      "description": "Professional user avatar for the top right profile dropdown."
+    },
+    "cargo_ship_bg": {
+      "url": "https://images.unsplash.com/photo-1751970046974-6d5a27f23ce1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1Mjh8MHwxfHNlYXJjaHwxfHxjYXJnbyUyMHNoaXAlMjBwb3J0JTIwYWVyaWFsfGVufDB8fHx8MTc3NDY3OTkzNnww&ixlib=rb-4.1.0&q=85",
+      "description": "Use as a very low opacity (10%) grayscale background image for empty states (e.g., 'No shipments yet' or inside the New Shipment form container)."
+    },
+    "data_network_texture": {
+      "url": "https://images.unsplash.com/photo-1765046255479-669cf07a0230?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTB8MHwxfHNlYXJjaHwyfHxkYXRhJTIwdmlzdWFsaXphdGlvbiUyMG5ldHdvcmslMjBhYnN0cmFjdHxlbnwwfHx8fDE3NzQ2Nzk5NDh8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Use this inside the Finance Layer simulation card as a subtle top-right decoration or overlay texture with blend-mode-multiply."
+    },
+    "shipping_container_texture": {
+      "url": "https://images.pexels.com/photos/5213978/pexels-photo-5213978.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Use as a banner image for the 'Decision Memory/History' page header. Apply a heavy grayscale filter."
+    }
+  },
+
+  "motion_and_interactions": {
+    "hover_states": "Hard, instant transitions for background colors. Use `-translate-y-[2px]` and hard drop-shadows `shadow-[4px_4px_0px_0px_#000]` for interactive cards.",
+    "page_transitions": "Minimal. Fade in with a slight vertical slide `motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-2`.",
+    "loading_states": "Avoid blurry skeleton loaders. Use solid gray block pulses or terminal text output."
+  },
+
+  "accessibility_and_testing": {
+    "contrast": "All text must pass WCAG AA. Gray text on gray backgrounds is forbidden. The Traffic Light colors are specifically chosen to be colorblind safe (high luminosity difference) but MUST always be paired with explicit text labels ('PROCEED', 'CAUTION', 'BLOCK').",
+    "testing_attributes": "EVERY button, input, toggle, and key data point MUST have a `data-testid` attribute (e.g., `data-testid='shipment-form-submit'`, `data-testid='risk-score-value'`).",
+    "motion": "Respect `prefers-reduced-motion`."
+  }
+}
