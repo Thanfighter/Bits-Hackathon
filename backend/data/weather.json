@@ -1,0 +1,33 @@
+{
+  "regions": {
+    "north_atlantic": {"storm_risk": 55, "season": "winter_high", "visibility": "moderate"},
+    "south_atlantic": {"storm_risk": 30, "season": "stable", "visibility": "good"},
+    "north_pacific": {"storm_risk": 60, "season": "typhoon_zone", "visibility": "poor"},
+    "south_pacific": {"storm_risk": 25, "season": "stable", "visibility": "good"},
+    "indian_ocean": {"storm_risk": 50, "season": "monsoon_risk", "visibility": "moderate"},
+    "mediterranean": {"storm_risk": 20, "season": "calm", "visibility": "excellent"},
+    "south_china_sea": {"storm_risk": 65, "season": "typhoon_zone", "visibility": "poor"},
+    "arabian_sea": {"storm_risk": 35, "season": "moderate", "visibility": "good"},
+    "red_sea": {"storm_risk": 15, "season": "stable", "visibility": "excellent"},
+    "caribbean": {"storm_risk": 45, "season": "hurricane_zone", "visibility": "moderate"},
+    "suez_canal": {"storm_risk": 10, "season": "stable", "visibility": "excellent"},
+    "malacca_strait": {"storm_risk": 30, "season": "moderate", "visibility": "good"}
+  },
+  "route_regions": {
+    "shanghai_los_angeles": ["south_china_sea", "north_pacific"],
+    "shanghai_rotterdam": ["south_china_sea", "malacca_strait", "indian_ocean", "red_sea", "mediterranean"],
+    "mumbai_rotterdam": ["arabian_sea", "red_sea", "mediterranean"],
+    "mumbai_dubai": ["arabian_sea"],
+    "singapore_rotterdam": ["malacca_strait", "indian_ocean", "red_sea", "mediterranean"],
+    "singapore_los_angeles": ["south_china_sea", "south_pacific", "north_pacific"],
+    "rotterdam_new_york": ["north_atlantic"],
+    "hamburg_new_york": ["north_atlantic"],
+    "dubai_mumbai": ["arabian_sea"],
+    "dubai_rotterdam": ["red_sea", "mediterranean"],
+    "busan_los_angeles": ["north_pacific"],
+    "santos_rotterdam": ["south_atlantic", "north_atlantic"],
+    "durban_rotterdam": ["south_atlantic", "north_atlantic"],
+    "mombasa_dubai": ["arabian_sea"],
+    "sydney_singapore": ["south_pacific", "malacca_strait"]
+  }
+}

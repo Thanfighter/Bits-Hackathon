@@ -1,0 +1,16 @@
+{
+  "carriers": {
+    "maersk": {"reliability": 88, "avg_transit_days": 22, "insurance_rating": "A+", "fleet_age": 8},
+    "msc": {"reliability": 82, "avg_transit_days": 24, "insurance_rating": "A", "fleet_age": 10},
+    "cma_cgm": {"reliability": 85, "avg_transit_days": 23, "insurance_rating": "A", "fleet_age": 9},
+    "cosco": {"reliability": 78, "avg_transit_days": 25, "insurance_rating": "B+", "fleet_age": 12},
+    "hapag_lloyd": {"reliability": 86, "avg_transit_days": 23, "insurance_rating": "A", "fleet_age": 9},
+    "evergreen": {"reliability": 80, "avg_transit_days": 24, "insurance_rating": "B+", "fleet_age": 11},
+    "one": {"reliability": 75, "avg_transit_days": 26, "insurance_rating": "B", "fleet_age": 14},
+    "yang_ming": {"reliability": 72, "avg_transit_days": 27, "insurance_rating": "B", "fleet_age": 15},
+    "zim": {"reliability": 76, "avg_transit_days": 25, "insurance_rating": "B+", "fleet_age": 13},
+    "wan_hai": {"reliability": 70, "avg_transit_days": 28, "insurance_rating": "B", "fleet_age": 16},
+    "pil": {"reliability": 68, "avg_transit_days": 29, "insurance_rating": "B-", "fleet_age": 18},
+    "regional_standard": {"reliability": 65, "avg_transit_days": 30, "insurance_rating": "C+", "fleet_age": 20}
+  }
+}

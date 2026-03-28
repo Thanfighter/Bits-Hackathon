@@ -1,0 +1,37 @@
+{
+  "carbon_intensity": {
+    "01-05": 15, "06-14": 10, "15": 20, "16-24": 18,
+    "25-27": 85, "28-38": 70, "39-40": 65, "41-43": 25,
+    "44-46": 20, "47-49": 30, "50-63": 35, "64-67": 30,
+    "68-70": 60, "71": 45, "72-83": 80, "84-85": 40,
+    "86-89": 75, "90-92": 25, "93": 50, "94-96": 30
+  },
+  "route_distance_nm": {
+    "shanghai_los_angeles": 5780,
+    "shanghai_rotterdam": 10580,
+    "mumbai_rotterdam": 6340,
+    "mumbai_dubai": 1200,
+    "singapore_rotterdam": 8440,
+    "singapore_los_angeles": 8770,
+    "rotterdam_new_york": 3460,
+    "hamburg_new_york": 3520,
+    "dubai_mumbai": 1200,
+    "dubai_rotterdam": 6420,
+    "busan_los_angeles": 5530,
+    "santos_rotterdam": 5870,
+    "durban_rotterdam": 6670,
+    "mombasa_dubai": 2520,
+    "sydney_singapore": 4440
+  },
+  "cbam_rates": {
+    "eu": {"rate_per_ton_co2": 85, "threshold_tons": 50},
+    "uk": {"rate_per_ton_co2": 72, "threshold_tons": 75},
+    "usa": {"rate_per_ton_co2": 0, "threshold_tons": 0},
+    "default": {"rate_per_ton_co2": 0, "threshold_tons": 0}
+  },
+  "destination_cbam_region": {
+    "germany": "eu", "netherlands": "eu", "france": "eu", "belgium": "eu",
+    "italy": "eu", "spain": "eu", "uk": "uk", "usa": "usa",
+    "default": "default"
+  }
+}
